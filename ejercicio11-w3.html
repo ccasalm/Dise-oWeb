@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        span {
+            margin-left: 4px;
+        }
+        
+        article img {
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        
+        article img:hover {
+            opacity: 1;
+        }
+        
+        .ver-mas {
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        
+        .ver-mas:hover {
+            opacity: 1;
+        }
+        
+        .w3-left,
+        .w3-right,
+        .w3-badge {
+            cursor: pointer
+        }
+        
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
+        
+        .w3-allerta {
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        @media only screen and (max-width:752px) {
+            .movil {
+                font-size: xxx-large !important;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (max-width:599px) {
+            .menu-movil {
+                display: block !important;
+            }
+            .movil {
+                font-size: xx-large !important;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (max-width:538px) {
+            .movil {
+                font-size: large !important;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (max-width:599px) {
+            .no-movil {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Para usar iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-blue" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+        <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-blue w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000"><i class="fa fa-home"></i> Home</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Sobre el planeta</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">Curiosidades</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover ">
+            <a href="#" class="w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000"></i>Galeria</a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">Tierra</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">Mar</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue">Montaña</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Contactanos</a>
+        <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Foro</a>
+    </div>
+
+    <div id="main">
+        <div class="w3-blue .menu-movil" style="display: none;">
+            <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+        <script>
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "40%";
+                document.getElementById("mySidebar").style.width = "40%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
+        <!--Cabecera-->
+        <header class="w3-row">
+            <!--Barra de navegación-->
+            <nav class="w3-row no-movil w3-threequarter">
+                <div class="w3-bar w3-dark-grey">
+                    <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-blue w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000"><i class="fa fa-home"></i> Home</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Sobre el planeta</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                            <a href="#" class="w3-bar-item w3-button w3-hover-blue">Curiosidades</a>
+                        </div>
+                    </div>
+                    <div class="w3-dropdown-hover ">
+                        <a href="#" class="w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000"></i>Galeria</a>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                            <a href="#" class="w3-bar-item w3-button w3-hover-blue">Tierra</a>
+                            <a href="#" class="w3-bar-item w3-button w3-hover-blue">Mar</a>
+                            <a href="#" class="w3-bar-item w3-button w3-hover-blue">Montaña</a>
+                        </div>
+                    </div>
+                    <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Contactanos</a>
+                    <a href="#" class="w3-bar-item w3-button w3-large w3-text-white w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Foro</a>
+                </div>
+            </nav>
+
+            <nav class="w3-row no-movil w3-quarter">
+                <div class="w3-bar w3-dark-grey">
+                    <div class="w3-dropdown-hover w3-right">
+                        <a href="#" class="w3-btn w3-large w3-text-white w3-blue w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Login<span><i class="fa fa-user"></i></span></a>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                            <a href="#" class="w3-bar-item w3-button ">Loguear</a>
+                            <a href="#" class="w3-bar-item w3-button">Registrar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--Fin Barra de navegación-->
+            <!--Slide Imágenes-->
+            <div class="w3-display-container w3-col">
+                <img class="mySlides" src="./img/foto1.jpg" style="width:100%">
+                <img class="mySlides" src="./img/foto2.jpg" style="width:100%">
+                <img class="mySlides" src="./img/foto3.jpg" style="width:100%">
+
+                <div class="w3-display-middle w3-container w3-jumbo w3-text-white w3-allerta movil" style="text-shadow:1px 1px 0 #000">Visitando nuestro mundo</div>
+                <div class="w3-center w3-container w3-section w3-large w3-text-blue w3-display-bottommiddle" style="width:100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                    showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    if (n > x.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" w3-blue", "");
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " w3-blue";
+                }
+            </script>
+
+        </header>
+        <!--Fin Cabecera-->
+        <main class="w3-row">
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta w3-text" style="text-shadow:1px 1px 0 #000">Fauna: Marina</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/molusco-marino.jpg" alt="Molusco Marino" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Moluscos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/cangrejoartropodo.jpg" alt="Cangrejo Japonés" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Artrópodos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/delfin.jpg" alt="Delfin" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Mamíferos</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor
+                        sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                    <br>
+                    <br>
+                </article>
+                <div class="w3-display-bottom  w3-margin-top w3-padding-large w3-center">
+                    <a href="#" class="w3-button w3-text-white  w3-grey w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Ver más...</a>
+                </div>
+            </section>
+            <section class="w3container w3-row">
+                <h2 class="w3-panel w3-dark-gray w3-allerta">Fauna: Terrestre</h2>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/caracol.jpg" alt="Caracol" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta">Moluscos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, cumque neque necessitatibus deserunt explicabo maiores ipsam dolorum impedit tempore minima fuga libero quos cupiditate, alias quis eligendi facilis atque?Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Quisquam accusamus iste rerum ea aperiam facere porro quo numquam iure molestias impedit distinctio mollitia, similique recusandae nulla, officia dignissimos, totam minima.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/leon1.jpg" alt="León" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta">Mamíferos</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo officia quasi ab fugiat quia inventore odit, vero perspiciatis nostrum aut illum beatae modi perferendis laudantium unde fuga nesciunt asperiores eos?Lorem, ipsum dolor
+                        sit amet consectetur adipisicing elit. Culpa nemo earum, consectetur similique, dolorem sapiente unde itaque atque qui nihil laboriosam quaerat eveniet eius exercitationem dicta libero sint molestiae hic.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="w3-display-container w3-third w3-padding-large">
+                    <img class="" src="img/cobra.jpg" alt="Cobra" style="width:100%">
+                    <h3 class="w3-panel w3-blue w3-allerta">Reptiles</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus nulla debitis aut? Officia nostrum, repellendus id quae neque possimus debitis sed omnis ea deleniti rerum consectetur expedita ipsam molestiae.Tenetur nihil
+                        iure nesciunt corrupti perferendis earum unde laborum, est fugiat quaerat impedit numquam? Quisquam qui itaque, soluta veniam odio repudiandae doloribus consequuntur, corrupti quo ab ipsa officia aliquid laudantium.</p>
+                    <a href="#">Leer más...</a>
+                    <br>
+                    <br>
+                </article>
+                <div class="w3-display-bottom w3-padding-large w3-center">
+                    <a href="#" class="w3-button w3-text-white  w3-grey w3-hover-blue w3-allerta" style="text-shadow:1px 1px 0 #000">Ver más...</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="w3-container">
+                <h2>Nuestro equipo</h2>
+                <ul class="w3-ul w3-card-4">
+                    <li class="w3-bar w3-hover-blue w3-quarter">
+                        <img src="img/img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                        <div class="w3-bar-item">
+                            <span class="w3-large">Mike</span><br>
+                            <span>Web Designer</span>
+                        </div>
+                    </li>
+
+                    <li class="w3-bar w3-hover-green w3-quarter">
+                        <img src="img/img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                        <div class="w3-bar-item">
+                            <span class="w3-large">Jill</span><br>
+                            <span>Support</span>
+                        </div>
+                    </li>
+
+                    <li class="w3-bar w3-hover-green w3-quarter">
+                        <img src="img/img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                        <div class="w3-bar-item">
+                            <span class="w3-large">Jane</span><br>
+                            <span>Accountant</span>
+                        </div>
+                    </li>
+                    <li class="w3-bar w3-hover-blue w3-quarter">
+                        <img src="img/img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                        <div class="w3-bar-item">
+                            <span class="w3-large">Willy</span><br>
+                            <span>Programmer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-panel w3-center w3-dark-grey w3-padding-16" style="text-shadow:1px 1px 0 #000"><small>Copyright &copy; 2020</small></div>
+        </footer>
+    </div>
+    <!--Fin Hamburguesa-->
+</body>
+
+</html>

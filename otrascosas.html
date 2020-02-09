@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- BOTON HAMBURGUESA, SOLO VISIBLE EN MOVIL. -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 1</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 2</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="far fa-circle"></i> Enlace 3</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 4</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.1</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.2</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 4.3</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button"><i class="fas fa-chevron-down"></i> Enlace 5</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.1</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.2</a>
+                <a href="#" class="w3-bar-item w3-button">Enlace 5.3</a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="w3-black">
+            <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+        <script>
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "40%";
+                document.getElementById("mySidebar").style.width = "40%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
+        <!--Fin main-->
+
+        <!--Footer-->
+        <footer>
+            <div class="w3-container">
+                <h3 class="w3-panel w3-red">Encuéntranos en...</h3>
+
+                <div class="w3-row">
+                    <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+                        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+                        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+                        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Tokyo</div>
+                    </a>
+                </div>
+
+                <div id="London" class="w3-container city" style="display:none">
+                    <h2>London</h2>
+                    <p>London es la capital de Inglaterra.</p>
+                </div>
+
+                <div id="Paris" class="w3-container city" style="display:none">
+                    <h2>Paris</h2>
+                    <p>Paris es la capital de Francia.</p>
+                </div>
+
+                <div id="Tokyo" class="w3-container city" style="display:none">
+                    <h2>Tokyo</h2>
+                    <p>Tokyo es la capital de Japón.</p>
+                </div>
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.firstElementChild.className += " w3-border-red";
+                }
+            </script>
+        </footer>
+        <!--Fin Footer-->
+        <div class="w3-container">
+            <h2>Nuestro equipo</h2>
+            <ul class="w3-ul w3-card-4">
+                <li class="w3-bar w3-hover-red">
+                    <img src="img/img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                    <div class="w3-bar-item">
+                        <span class="w3-large">Mike</span><br>
+                        <span>Web Designer</span>
+                    </div>
+                </li>
+
+                <li class="w3-bar w3-hover-blue">
+                    <img src="img/img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                    <div class="w3-bar-item">
+                        <span class="w3-large">Jill</span><br>
+                        <span>Support</span>
+                    </div>
+                </li>
+
+                <li class="w3-bar w3-hover-green">
+                    <img src="img/img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                    <div class="w3-bar-item">
+                        <span class="w3-large">Jane</span><br>
+                        <span>Accountant</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w3-panel w3-center w3-black w3-padding-16"><small>Copyright &copy; 2020</small></div>
+
+</body>
+
+</html>
